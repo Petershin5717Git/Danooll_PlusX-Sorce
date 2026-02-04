@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danool Design Studio V10</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; display: flex; height: 100vh; background: #f0f0f0; }
+        .sidebar { width: 80px; background: #333; color: white; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        .icon { font-size: 24px; margin-bottom: 30px; cursor: pointer; }
+        .workspace { flex: 1; display: flex; justify-content: center; align-items: center; }
+        .card { width: 325px; height: 512px; background: white; box-shadow: 0 0 20px rgba(0,0,0,0.2); border-radius: 10px; position: relative; text-align: center; overflow: hidden; }
+        .card-header { background: #0056b3; color: white; padding: 20px 0; font-weight: bold; font-size: 20px; }
+        .photo-area { width: 120px; height: 150px; background: #ddd; margin: 30px auto; display: flex; align-items: center; justify-content: center; color: #777; border: 2px dashed #999; }
+        .info { margin: 10px 0; font-size: 16px; color: #333; }
+        .badge { position: absolute; bottom: 30px; right: 30px; width: 50px; height: 50px; background: gold; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        .panel { width: 300px; background: white; border-left: 1px solid #ddd; padding: 20px; box-sizing: border-box; }
+        input, button { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        button { background: #0056b3; color: white; border: none; cursor: pointer; }
+        button:hover { background: #004494; }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="icon">📁</div>
+        <div class="icon">T</div>
+        <div class="icon">🖼️</div>
+        <div class="icon">⚙️</div>
+    </div>
+
+    <div class="workspace">
+        <div class="card">
+            <div class="card-header">EMPLOYEE ID</div>
+            <div class="photo-area">사진</div>
+            <div class="info"><strong>성 명 :</strong> 홍 길 동</div>
+            <div class="info"><strong>부 서 :</strong> 개발팀</div>
+            <div class="info"><strong>직 급 :</strong> 대 리</div>
+            <div class="badge">V10</div>
+        </div>
+    </div>
+
+    <div class="panel">
+        <h3>Danool Properties</h3>
+        <hr>
+        <p>데이터 연동 (Excel)</p>
+        <input type="text" value="DB.Name" readonly>
+        <input type="text" value="DB.Department" readonly>
+        <br><br>
+        <button onclick="alert('엑셀 데이터가 연동되었습니다!')">엑셀 파일 불러오기</button>
+        <div style="margin-top:20px; padding:10px; background:#eef; border-radius:5px;">
+            <strong>⚡ System Status:</strong><br>
+            Online & Secure
+        </div>
+    </div>
+
+</body>
 </html>
